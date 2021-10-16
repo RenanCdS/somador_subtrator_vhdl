@@ -1,0 +1,15 @@
+V3 7
+FL /home/ise/ISE_Projects/somador_subtrator_n2/adder_subtractor.vhd 2021/10/16.03:56:18 P.20131013
+EN work/adder_subtractor 1634356589 \
+      FL /home/ise/ISE_Projects/somador_subtrator_n2/adder_subtractor.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/adder_subtractor/Behavioral 1634356590 \
+      FL /home/ise/ISE_Projects/somador_subtrator_n2/adder_subtractor.vhd \
+      EN work/adder_subtractor 1634356589 CP full_adder
+FL /home/ise/ISE_Projects/somador_subtrator_n2/full_adder.vhd 2021/10/16.02:26:02 P.20131013
+EN work/full_adder 1634356587 \
+      FL /home/ise/ISE_Projects/somador_subtrator_n2/full_adder.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/full_adder/Behavioral 1634356588 \
+      FL /home/ise/ISE_Projects/somador_subtrator_n2/full_adder.vhd \
+      EN work/full_adder 1634356587

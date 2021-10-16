@@ -1,0 +1,5 @@
+set -tmpdir "/home/ise/ISE_Projects/somador_subtrator_n2/xst/projnav.tmp"
+set -xsthdpdir "/home/ise/ISE_Projects/somador_subtrator_n2/xst"
+elaborate
+-ifn full_adder.prj
+-ifmt mixed

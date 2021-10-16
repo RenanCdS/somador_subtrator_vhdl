@@ -1,0 +1,1 @@
+vhdtdtfi -prj somador_subtrator_n2 -o /home/ise/ISE_Projects/somador_subtrator_n2/seven_segments_display.vhi -module seven_segments_display -template /opt/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work seven_segments_display.vhd 

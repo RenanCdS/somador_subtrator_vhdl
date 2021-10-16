@@ -1,0 +1,4 @@
+EN adder_subtractor NULL /home/ise/ISE_Projects/somador_subtrator_n2/adder_subtractor.vhd sub00/vhpl00 1634356589
+EN full_adder NULL /home/ise/ISE_Projects/somador_subtrator_n2/full_adder.vhd sub00/vhpl01 1634356587
+AR full_adder behavioral /home/ise/ISE_Projects/somador_subtrator_n2/full_adder.vhd sub00/vhpl02 1634356588
+AR adder_subtractor behavioral /home/ise/ISE_Projects/somador_subtrator_n2/adder_subtractor.vhd sub00/vhpl03 1634356590

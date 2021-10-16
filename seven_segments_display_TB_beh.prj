@@ -1,0 +1,2 @@
+vhdl work "seven_segments_display.vhd"
+vhdl work "seven_segments_display_TB.vhd"
