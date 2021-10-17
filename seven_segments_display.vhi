@@ -1,5 +1,5 @@
 
--- VHDL Instantiation Created from source file seven_segments_display.vhd -- 04:03:42 10/16/2021
+-- VHDL Instantiation Created from source file seven_segments_display.vhd -- 07:30:48 10/17/2021
 --
 -- Notes: 
 -- 1) This instantiation template has been automatically generated using types
@@ -8,7 +8,8 @@
 
 	COMPONENT seven_segments_display
 	PORT(
-		SEL : IN std_logic_vector(3 downto 0);          
+		SEL : IN std_logic_vector(3 downto 0);
+		FLAG : IN std_logic;          
 		SEGMENTS : OUT std_logic_vector(6 downto 0);
 		DISPLAYS : OUT std_logic_vector(3 downto 0)
 		);
@@ -16,6 +17,7 @@
 
 	Inst_seven_segments_display: seven_segments_display PORT MAP(
 		SEL => ,
+		FLAG => ,
 		SEGMENTS => ,
 		DISPLAYS => 
 	);

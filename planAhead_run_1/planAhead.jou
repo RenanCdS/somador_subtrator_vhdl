@@ -1,0 +1,85 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Sun Oct 17 04:12:46 2021
+# Process ID: 4863
+# Log file: /home/ise/ISE_Projects/somador_subtrator_n2/planAhead_run_1/planAhead.log
+# Journal file: /home/ise/ISE_Projects/somador_subtrator_n2/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /home/ise/ISE_Projects/somador_subtrator_n2/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin K14 [get_ports {DISPLAYS[3]}]
+endgroup
+startgroup
+set_property package_pin J12 [get_ports {DISPLAYS[2]}]
+endgroup
+set_property package_pin "" [get_ports [list  {DISPLAYS[1]}]]
+startgroup
+set_property package_pin M13 [get_ports {DISPLAYS[2]}]
+endgroup
+startgroup
+set_property package_pin J12 [get_ports {DISPLAYS[1]}]
+endgroup
+startgroup
+set_property package_pin F12 [get_ports {DISPLAYS[0]}]
+endgroup
+set_property package_pin "" [get_ports [list  {SEGMENTS[5]}]]
+startgroup
+set_property package_pin M12 [get_ports {SEGMENTS[6]}]
+endgroup
+startgroup
+set_property package_pin L13 [get_ports {SEGMENTS[5]}]
+endgroup
+startgroup
+set_property package_pin P12 [get_ports {SEGMENTS[4]}]
+endgroup
+startgroup
+set_property package_pin N11 [get_ports {SEGMENTS[3]}]
+endgroup
+startgroup
+set_property package_pin N14 [get_ports {SEGMENTS[2]}]
+endgroup
+startgroup
+set_property package_pin H12 [get_ports {SEGMENTS[1]}]
+endgroup
+startgroup
+set_property package_pin L14 [get_ports {SEGMENTS[0]}]
+endgroup
+startgroup
+set_property package_pin B4 [get_ports {INPUT[3]}]
+endgroup
+startgroup
+set_property package_pin K3 [get_ports {INPUT[2]}]
+endgroup
+startgroup
+set_property package_pin L3 [get_ports {INPUT[1]}]
+endgroup
+startgroup
+set_property package_pin P11 [get_ports {INPUT[0]}]
+endgroup
+startgroup
+set_property package_pin G12 [get_ports CLEAR]
+endgroup
+startgroup
+set_property package_pin G3 [get_ports ENABLE_A]
+endgroup
+set_property package_pin "" [get_ports [list  OPTION]]
+startgroup
+set_property package_pin F3 [get_ports ENABLE_B]
+endgroup
+set_property package_pin "" [get_ports [list  OPTION]]
+startgroup
+set_property package_pin B3 [get_ports ENABLE_B]
+endgroup
+startgroup
+set_property package_pin F3 [get_ports ENABLE_A]
+endgroup
+startgroup
+set_property package_pin E2 [get_ports ENABLE_B]
+endgroup
+startgroup
+set_property package_pin G3 [get_ports OPTION]
+endgroup
+save_constraints

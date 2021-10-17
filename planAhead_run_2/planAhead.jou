@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Sun Oct 17 08:32:08 2021
+# Process ID: 6724
+# Log file: /home/ise/ISE_Projects/somador_subtrator_n2/planAhead_run_2/planAhead.log
+# Journal file: /home/ise/ISE_Projects/somador_subtrator_n2/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /home/ise/ISE_Projects/somador_subtrator_n2/pa.fromHdl.tcl
+update_compile_order -fileset sim_1

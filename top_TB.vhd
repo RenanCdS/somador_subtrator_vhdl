@@ -17,8 +17,7 @@ ARCHITECTURE behavior OF top_TB IS
          ENABLE_A : IN  std_logic;
          ENABLE_B : IN  std_logic;
          CLEAR : IN  std_logic;
-         CARRY_OUT : OUT  std_logic;
-         OVERFLOW : OUT  std_logic;
+         FLAG : OUT  std_logic;
          DISPLAYS : OUT  std_logic_vector(3 downto 0);
          SEGMENTS : OUT  std_logic_vector(6 downto 0)
         );
@@ -34,13 +33,12 @@ ARCHITECTURE behavior OF top_TB IS
    signal CLEAR : std_logic := '0';
 
  	--Outputs
-   signal CARRY_OUT : std_logic;
-   signal OVERFLOW : std_logic;
+   signal FLAG : std_logic;
    signal DISPLAYS : std_logic_vector(3 downto 0);
    signal SEGMENTS : std_logic_vector(6 downto 0);
 
    -- Clock period definitions
-   constant CLOCK_period : time := 100 ns;
+   constant CLOCK_period : time := 50 ns;
  
 BEGIN
  
@@ -52,8 +50,7 @@ BEGIN
           ENABLE_A => ENABLE_A,
           ENABLE_B => ENABLE_B,
           CLEAR => CLEAR,
-          CARRY_OUT => CARRY_OUT,
-          OVERFLOW => OVERFLOW,
+          FLAG => FLAG,
           DISPLAYS => DISPLAYS,
           SEGMENTS => SEGMENTS
         );
@@ -70,21 +67,42 @@ BEGIN
 
    -- Stimulus process
    stim_proc: process
-   begin		
-		CLEAR <= '1';
-      wait for 100 ns;	
+   begin
+		CLEAR	<= '1';
+		
+		-- Adicao comum
+      wait for CLOCK_period;	
 		CLEAR <= '0';
-		wait for 200 ns;
-		INPUT <= "0001";
 		OPTION <= '0';
 		ENABLE_A <= '1';
 		ENABLE_B <= '0';
-      wait for CLOCK_period*4;
-		INPUT <= "0010";
+		INPUT <= "0001";
+      wait for CLOCK_period;
 		ENABLE_A <= '0';
 		ENABLE_B <= '1';
-      -- insert stimulus here 
-
+		INPUT <= "0010";
+		
+		-- Subtracao que resulta em numero negativo
+		wait for CLOCK_period;
+		OPTION <= '1';
+		ENABLE_A <= '1';
+		ENABLE_B <= '0';
+		INPUT <= "0010";
+		wait for CLOCK_period;
+		ENABLE_A <= '0';
+		ENABLE_B <= '1';
+		INPUT <= "1000";
+		
+		-- Subtracao que resulta em numero positivo
+		wait for CLOCK_period;
+		OPTION <= '1';
+		ENABLE_A <= '1';
+		INPUT <= "1010";
+		ENABLE_B <= '0';
+		wait for CLOCK_period;
+		ENABLE_A <= '0';
+		INPUT <= "0010";
+		ENABLE_B <= '1';
       wait;
    end process;
 
