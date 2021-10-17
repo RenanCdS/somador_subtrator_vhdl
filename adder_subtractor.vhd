@@ -4,8 +4,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity adder_subtractor is
     Port ( ENT_A, ENT_B : in  STD_LOGIC_VECTOR(3 downto 0);
-           CARRY_OUT, OVERFLOW : out  STD_LOGIC;
            OP : in  STD_LOGIC;
+			  CARRY_OUT, OVERFLOW : out  STD_LOGIC;
            RESULTS: out  STD_LOGIC_VECTOR (3 downto 0));
 end adder_subtractor;
 

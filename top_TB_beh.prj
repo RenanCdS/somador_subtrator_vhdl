@@ -1,0 +1,6 @@
+vhdl work "full_adder.vhd"
+vhdl work "seven_segments_display.vhd"
+vhdl work "regs.vhd"
+vhdl work "adder_subtractor.vhd"
+vhdl work "somador_subtrator_n2.vhd"
+vhdl work "top_TB.vhd"

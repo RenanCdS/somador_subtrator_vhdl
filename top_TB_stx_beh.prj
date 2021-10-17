@@ -1,0 +1,6 @@
+vhdl isim_temp "full_adder.vhd"
+vhdl isim_temp "seven_segments_display.vhd"
+vhdl isim_temp "regs.vhd"
+vhdl isim_temp "adder_subtractor.vhd"
+vhdl isim_temp "somador_subtrator_n2.vhd"
+vhdl isim_temp "top_TB.vhd"

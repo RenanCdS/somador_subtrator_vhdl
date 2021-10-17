@@ -90,6 +90,10 @@ BEGIN
 		ENT_A <= "0111";
 		ENT_B <= "0011";
 		OP <= '1';
+		wait for 100 ns;
+		ENT_A <= "0001";
+		ENT_B <= "0010";
+		OP <= '0';
 		wait;
 	end process;
 
