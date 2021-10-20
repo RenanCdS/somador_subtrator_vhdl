@@ -20,7 +20,7 @@ begin
 	begin
 		if (FLAG = '0') then
 				case SEL is
-					when "0000" => SEGMENTS <= "0000001"; --0
+					when "0000" => SEGMENTS <= "0111111"; --0
 					when "0001" => SEGMENTS <= "0000110"; --1
 					when "0010" => SEGMENTS <= "1011011"; --2
 					when "0011" => SEGMENTS <= "1001111"; --3
@@ -40,7 +40,7 @@ begin
 				end case;
 		else 
 				case SEL is
-					when "0000" => SEGMENTS <= "0000001"; --0
+					when "0000" => SEGMENTS <= "0111111"; --0
 					when "1111" => SEGMENTS <= "0000110"; --1
 					when "1110" => SEGMENTS <= "1011011"; --2
 					when "1101" => SEGMENTS <= "1001111"; --3

@@ -103,6 +103,17 @@ BEGIN
 		ENABLE_A <= '0';
 		INPUT <= "0010";
 		ENABLE_B <= '1';
+		
+		-- Adicao de F + 1. Deve resultar em 0 e acender a flag
+		wait for CLOCK_period;
+		OPTION <= '0';
+		ENABLE_A <= '1';
+		INPUT <= "1111";
+		ENABLE_B <= '0';
+		wait for CLOCK_period;
+		ENABLE_A <= '0';
+		INPUT <= "0001";
+		ENABLE_B <= '1';
       wait;
    end process;
 
