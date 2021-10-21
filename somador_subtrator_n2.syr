@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> 
 Reading design: somador_subtrator_n2.prj
@@ -108,17 +108,15 @@ Slice Utilization Ratio Delta      : 5
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "/home/ise/ISE_Projects/somador_subtrator_n2/seven_segments_display.vhd" in Library work.
-WARNING:HDLParsers:3530 - Time stamp of file "/home/ise/ISE_Projects/somador_subtrator_n2/seven_segments_display.vhd" is newer than current system time.
 Architecture behavioral of Entity seven_segments_display is up to date.
 Compiling vhdl file "/home/ise/ISE_Projects/somador_subtrator_n2/regs.vhd" in Library work.
 Architecture behavioral of Entity regs is up to date.
+Compiling vhdl file "/home/ise/ISE_Projects/somador_subtrator_n2/five_bit_regs.vhd" in Library work.
+Architecture behavioral of Entity five_bit_regs is up to date.
 Compiling vhdl file "/home/ise/ISE_Projects/somador_subtrator_n2/adder_subtractor.vhd" in Library work.
-WARNING:HDLParsers:3530 - Time stamp of file "/home/ise/ISE_Projects/somador_subtrator_n2/adder_subtractor.vhd" is newer than current system time.
 Architecture behavioral of Entity adder_subtractor is up to date.
 Compiling vhdl file "/home/ise/ISE_Projects/somador_subtrator_n2/somador_subtrator_n2.vhd" in Library work.
-WARNING:HDLParsers:3530 - Time stamp of file "/home/ise/ISE_Projects/somador_subtrator_n2/somador_subtrator_n2.vhd" is newer than current system time.
-Entity <somador_subtrator_n2> compiled.
-Entity <somador_subtrator_n2> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity somador_subtrator_n2 is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -128,6 +126,8 @@ Analyzing hierarchy for entity <somador_subtrator_n2> in library <work> (archite
 Analyzing hierarchy for entity <seven_segments_display> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <regs> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <five_bit_regs> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <adder_subtractor> in library <work> (architecture <behavioral>).
 
@@ -148,6 +148,9 @@ Entity <seven_segments_display> analyzed. Unit <seven_segments_display> generate
 Analyzing Entity <regs> in library <work> (Architecture <behavioral>).
 Entity <regs> analyzed. Unit <regs> generated.
 
+Analyzing Entity <five_bit_regs> in library <work> (Architecture <behavioral>).
+Entity <five_bit_regs> analyzed. Unit <five_bit_regs> generated.
+
 Analyzing Entity <adder_subtractor> in library <work> (Architecture <behavioral>).
 Entity <adder_subtractor> analyzed. Unit <adder_subtractor> generated.
 
@@ -160,10 +163,6 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <seven_segments_display>.
     Related source file is "/home/ise/ISE_Projects/somador_subtrator_n2/seven_segments_display.vhd".
-WARNING:Xst:647 - Input <FLAG> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 16x7-bit ROM for signal <SEGMENTS>.
-    Summary:
-	inferred   1 ROM(s).
 Unit <seven_segments_display> synthesized.
 
 
@@ -173,6 +172,14 @@ Synthesizing Unit <regs>.
     Summary:
 	inferred   4 D-type flip-flop(s).
 Unit <regs> synthesized.
+
+
+Synthesizing Unit <five_bit_regs>.
+    Related source file is "/home/ise/ISE_Projects/somador_subtrator_n2/five_bit_regs.vhd".
+    Found 5-bit register for signal <q_out_temp>.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+Unit <five_bit_regs> synthesized.
 
 
 Synthesizing Unit <adder_subtractor>.
@@ -185,7 +192,7 @@ Unit <adder_subtractor> synthesized.
 
 Synthesizing Unit <somador_subtrator_n2>.
     Related source file is "/home/ise/ISE_Projects/somador_subtrator_n2/somador_subtrator_n2.vhd".
-WARNING:Xst:653 - Signal <adder_subtractor_flag> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <regs_EXIT_to_display<4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <somador_subtrator_n2> synthesized.
 
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
@@ -194,12 +201,11 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 1
- 16x7-bit ROM                                          : 1
 # Adders/Subtractors                                   : 1
  5-bit addsub                                          : 1
-# Registers                                            : 2
+# Registers                                            : 3
  4-bit register                                        : 2
+ 5-bit register                                        : 1
 
 =========================================================================
 
@@ -207,23 +213,23 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+WARNING:Xst:2677 - Node <q_out_temp_4> of sequential type is unconnected in block <REG_EXIT>.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 1
- 16x7-bit ROM                                          : 1
 # Adders/Subtractors                                   : 1
  5-bit addsub                                          : 1
-# Registers                                            : 8
- Flip-Flops                                            : 8
+# Registers                                            : 13
+ Flip-Flops                                            : 13
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:2677 - Node <REG_EXIT/q_out_temp_4> of sequential type is unconnected in block <somador_subtrator_n2>.
 
 Optimizing unit <somador_subtrator_n2> ...
 
@@ -237,8 +243,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 8
- Flip-Flops                                            : 8
+# Registers                                            : 12
+ Flip-Flops                                            : 12
 
 =========================================================================
 
@@ -264,21 +270,25 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 21
+# IOs                              : 23
 
 Cell Usage :
-# BELS                             : 20
+# BELS                             : 35
 #      GND                         : 1
-#      LUT2                        : 1
-#      LUT4                        : 15
-#      MUXF5                       : 2
+#      LUT2                        : 2
+#      LUT2_L                      : 1
+#      LUT3                        : 2
+#      LUT3_D                      : 1
+#      LUT4                        : 19
+#      LUT4_D                      : 1
+#      MUXF5                       : 7
 #      VCC                         : 1
-# FlipFlops/Latches                : 8
-#      FDCE                        : 8
+# FlipFlops/Latches                : 12
+#      FDCE                        : 12
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 20
-#      IBUF                        : 8
+# IO Buffers                       : 22
+#      IBUF                        : 10
 #      OBUF                        : 12
 =========================================================================
 
@@ -287,11 +297,11 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-4 
 
- Number of Slices:                        9  out of    960     0%  
- Number of Slice Flip Flops:              8  out of   1920     0%  
- Number of 4 input LUTs:                 16  out of   1920     0%  
- Number of IOs:                          21
- Number of bonded IOBs:                  21  out of     83    25%  
+ Number of Slices:                       15  out of    960     1%  
+ Number of Slice Flip Flops:             12  out of   1920     0%  
+ Number of 4 input LUTs:                 26  out of   1920     1%  
+ Number of IOs:                          23
+ Number of bonded IOBs:                  23  out of     83    27%  
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -315,7 +325,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLOCK                              | BUFGP                  | 8     |
+CLOCK                              | BUFGP                  | 12    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -324,99 +334,129 @@ Asynchronous Control Signals Information:
 Control Signal                     | Buffer(FF name)        | Load  |
 -----------------------------------+------------------------+-------+
 CLEAR                              | IBUF                   | 8     |
+CLEAR_EXIT                         | IBUF                   | 4     |
 -----------------------------------+------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: No path found
-   Minimum input arrival time before clock: 2.360ns
-   Maximum output required time after clock: 9.917ns
-   Maximum combinational path delay: 10.764ns
+   Minimum period: 4.149ns (Maximum Frequency: 241.022MHz)
+   Minimum input arrival time before clock: 5.098ns
+   Maximum output required time after clock: 11.212ns
+   Maximum combinational path delay: 12.161ns
 
 Timing Detail:
 --------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'CLOCK'
-  Total number of paths / destination ports: 16 / 16
+Timing constraint: Default period analysis for Clock 'CLOCK'
+  Clock period: 4.149ns (frequency: 241.022MHz)
+  Total number of paths / destination ports: 21 / 4
 -------------------------------------------------------------------------
-Offset:              2.360ns (Levels of Logic = 1)
-  Source:            ENABLE_B (PAD)
-  Destination:       REG_B/q_out_temp_3 (FF)
+Delay:               4.149ns (Levels of Logic = 3)
+  Source:            REG_A/q_out_temp_0 (FF)
+  Destination:       REG_EXIT/q_out_temp_3 (FF)
+  Source Clock:      CLOCK rising
   Destination Clock: CLOCK rising
 
-  Data Path: ENABLE_B to REG_B/q_out_temp_3
+  Data Path: REG_A/q_out_temp_0 to REG_EXIT/q_out_temp_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             4   1.218   0.587  ENABLE_B_IBUF (ENABLE_B_IBUF)
-     FDCE:CE                   0.555          REG_B/q_out_temp_0
+     FDCE:C->Q             3   0.591   0.610  REG_A/q_out_temp_0 (REG_A/q_out_temp_0)
+     LUT3_D:I1->O          1   0.704   0.424  ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_cy<1>1_SW0 (N18)
+     LUT4_D:I3->LO         1   0.704   0.104  ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_cy<1>1 (N44)
+     LUT4:I3->O            1   0.704   0.000  ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_xor<3>11 (adder_subtractor_to_regs_EXIT<3>)
+     FDCE:D                    0.308          REG_EXIT/q_out_temp_3
     ----------------------------------------
-    Total                      2.360ns (1.773ns logic, 0.587ns route)
-                                       (75.1% logic, 24.9% route)
+    Total                      4.149ns (3.011ns logic, 1.138ns route)
+                                       (72.6% logic, 27.4% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'CLOCK'
-  Total number of paths / destination ports: 214 / 8
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLOCK'
+  Total number of paths / destination ports: 28 / 23
 -------------------------------------------------------------------------
-Offset:              9.917ns (Levels of Logic = 6)
-  Source:            REG_B/q_out_temp_0 (FF)
-  Destination:       SEGMENTS<1> (PAD)
-  Source Clock:      CLOCK rising
-
-  Data Path: REG_B/q_out_temp_0 to SEGMENTS<1>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDCE:C->Q             5   0.591   0.712  REG_B/q_out_temp_0 (REG_B/q_out_temp_0)
-     LUT4:I1->O            1   0.704   0.000  ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_cy<1>11 (ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_cy<1>1)
-     MUXF5:I1->O           2   0.321   0.451  ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_cy<1>1_f5 (ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_cy<1>)
-     LUT4:I3->O            2   0.704   0.451  ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_cy<2>11 (ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_cy<2>)
-     LUT4:I3->O            7   0.704   0.883  ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_xor<3>11 (adder_subtractor_to_display<3>)
-     LUT4:I0->O            1   0.704   0.420  SEVEN_SEGMENTS_DISPLAY_INST/Mrom_SEGMENTS111 (SEGMENTS_1_OBUF)
-     OBUF:I->O                 3.272          SEGMENTS_1_OBUF (SEGMENTS<1>)
-    ----------------------------------------
-    Total                      9.917ns (7.000ns logic, 2.917ns route)
-                                       (70.6% logic, 29.4% route)
-
-=========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 67 / 8
--------------------------------------------------------------------------
-Delay:               10.764ns (Levels of Logic = 7)
+Offset:              5.098ns (Levels of Logic = 4)
   Source:            OPTION (PAD)
-  Destination:       SEGMENTS<1> (PAD)
+  Destination:       REG_EXIT/q_out_temp_3 (FF)
+  Destination Clock: CLOCK rising
 
-  Data Path: OPTION to SEGMENTS<1>
+  Data Path: OPTION to REG_EXIT/q_out_temp_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             8   1.218   0.932  OPTION_IBUF (ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_lut<4>)
-     LUT4:I0->O            1   0.704   0.000  ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_cy<1>11 (ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_cy<1>1)
-     MUXF5:I1->O           2   0.321   0.451  ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_cy<1>1_f5 (ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_cy<1>)
-     LUT4:I3->O            2   0.704   0.451  ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_cy<2>11 (ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_cy<2>)
-     LUT4:I3->O            7   0.704   0.883  ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_xor<3>11 (adder_subtractor_to_display<3>)
-     LUT4:I0->O            1   0.704   0.420  SEVEN_SEGMENTS_DISPLAY_INST/Mrom_SEGMENTS111 (SEGMENTS_1_OBUF)
-     OBUF:I->O                 3.272          SEGMENTS_1_OBUF (SEGMENTS<1>)
+     LUT3_D:I0->O          1   0.704   0.424  ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_cy<1>1_SW0 (N18)
+     LUT4_D:I3->LO         1   0.704   0.104  ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_cy<1>1 (N44)
+     LUT4:I3->O            1   0.704   0.000  ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_xor<3>11 (adder_subtractor_to_regs_EXIT<3>)
+     FDCE:D                    0.308          REG_EXIT/q_out_temp_3
     ----------------------------------------
-    Total                     10.764ns (7.627ns logic, 3.137ns route)
-                                       (70.9% logic, 29.1% route)
+    Total                      5.098ns (3.638ns logic, 1.460ns route)
+                                       (71.4% logic, 28.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLOCK'
+  Total number of paths / destination ports: 162 / 8
+-------------------------------------------------------------------------
+Offset:              11.212ns (Levels of Logic = 7)
+  Source:            REG_A/q_out_temp_0 (FF)
+  Destination:       SEGMENTS<6> (PAD)
+  Source Clock:      CLOCK rising
+
+  Data Path: REG_A/q_out_temp_0 to SEGMENTS<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.591   0.610  REG_A/q_out_temp_0 (REG_A/q_out_temp_0)
+     LUT3_D:I1->O          1   0.704   0.424  ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_cy<1>1_SW0 (N18)
+     LUT4_D:I3->O          1   0.704   0.424  ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_cy<1>1 (ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_cy<1>)
+     LUT4:I3->O            1   0.704   0.455  ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_xor<4>11_SW0 (N27)
+     LUT4:I2->O           14   0.704   1.175  ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_xor<4>11 (FLAG_OBUF)
+     LUT4:I0->O            1   0.704   0.000  SEVEN_SEGMENTS_DISPLAY_INST/SEGMENTS<4>_G (N30)
+     MUXF5:I1->O           1   0.321   0.420  SEVEN_SEGMENTS_DISPLAY_INST/SEGMENTS<4> (SEGMENTS_4_OBUF)
+     OBUF:I->O                 3.272          SEGMENTS_4_OBUF (SEGMENTS<4>)
+    ----------------------------------------
+    Total                     11.212ns (7.704ns logic, 3.508ns route)
+                                       (68.7% logic, 31.3% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 56 / 8
+-------------------------------------------------------------------------
+Delay:               12.161ns (Levels of Logic = 8)
+  Source:            OPTION (PAD)
+  Destination:       SEGMENTS<6> (PAD)
+
+  Data Path: OPTION to SEGMENTS<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.218   0.932  OPTION_IBUF (ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_lut<4>)
+     LUT3_D:I0->O          1   0.704   0.424  ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_cy<1>1_SW0 (N18)
+     LUT4_D:I3->O          1   0.704   0.424  ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_cy<1>1 (ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_cy<1>)
+     LUT4:I3->O            1   0.704   0.455  ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_xor<4>11_SW0 (N27)
+     LUT4:I2->O           14   0.704   1.175  ADDER_SUBTRACTOR_INST/Maddsub_OPERATION_addsub0000_xor<4>11 (FLAG_OBUF)
+     LUT4:I0->O            1   0.704   0.000  SEVEN_SEGMENTS_DISPLAY_INST/SEGMENTS<4>_G (N30)
+     MUXF5:I1->O           1   0.321   0.420  SEVEN_SEGMENTS_DISPLAY_INST/SEGMENTS<4> (SEGMENTS_4_OBUF)
+     OBUF:I->O                 3.272          SEGMENTS_4_OBUF (SEGMENTS<4>)
+    ----------------------------------------
+    Total                     12.161ns (8.331ns logic, 3.830ns route)
+                                       (68.5% logic, 31.5% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 9.12 secs
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 11.81 secs
  
 --> 
 
 
-Total memory usage is 511840 kilobytes
+Total memory usage is 512432 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    6 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
 Number of infos    :    3 (   0 filtered)
 

@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Thu Oct 21 03:01:46 2021
+# Process ID: 3334
+# Log file: /home/ise/ISE_Projects/somador_subtrator_n2/planAhead_run_4/planAhead.log
+# Journal file: /home/ise/ISE_Projects/somador_subtrator_n2/planAhead_run_4/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /home/ise/ISE_Projects/somador_subtrator_n2/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin A7 [get_ports ENABLE_A]
+endgroup
+startgroup
+set_property package_pin M4 [get_ports ENABLE_B]
+endgroup
+startgroup
+set_property package_pin C11 [get_ports ENABLE_EXIT]
+endgroup
+startgroup
+set_property package_pin M4 [get_ports ENABLE_B]
+endgroup
+startgroup
+set_property package_pin A7 [get_ports ENABLE_A]
+endgroup
+startgroup
+set_property package_pin N3 [get_ports CLEAR_EXIT]
+endgroup
+startgroup
+set_property package_pin E2 [get_ports CLEAR]
+endgroup
+save_constraints

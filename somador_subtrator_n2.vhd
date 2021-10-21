@@ -7,8 +7,8 @@ entity somador_subtrator_n2 is
     Port ( CLOCK : in STD_LOGIC;
 			  INPUT : in  STD_LOGIC_VECTOR (3 downto 0);
 			  OPTION : in STD_LOGIC; -- Opcao que indica se sera adicao (0) ou subtracao (1)
-			  ENABLE_A, ENABLE_B : in STD_LOGIC;
-			  CLEAR : in STD_LOGIC;
+			  ENABLE_A, ENABLE_B, ENABLE_EXIT : in STD_LOGIC;
+			  CLEAR, CLEAR_EXIT : in STD_LOGIC;
 			  
 			  -- Outputs
 			  FLAG : out STD_LOGIC;
@@ -23,8 +23,7 @@ end somador_subtrator_n2;
 			ENT_A : IN std_logic_vector(3 downto 0);
 			ENT_B : IN std_logic_vector(3 downto 0);
 			OPTION : IN std_logic;          
-			FLAG : OUT std_logic;
-			RESULTS : OUT std_logic_vector(3 downto 0)
+			RESULTS : OUT std_logic_vector(4 downto 0)
 			);
 	END COMPONENT;
 	
@@ -47,16 +46,30 @@ end somador_subtrator_n2;
 		);
 	end component;
 	
-	signal adder_subtractor_to_display : STD_LOGIC_VECTOR (3 downto 0);
+	component five_bit_regs
+	port(
+		clock : in std_logic;
+		data : in std_logic_vector(4 downto 0);
+		enable : in std_logic;
+		clear : in std_logic;          
+		q_out : out std_logic_vector(4 downto 0)
+		);
+	end component;
+	
+	-- ligacao do registrador de saida para o display
+	signal regs_EXIT_to_display : STD_LOGIC_VECTOR (4 downto 0);
+	
 	signal regs_A_q_out : STD_LOGIC_VECTOR (3 downto 0);
 	signal regs_B_q_out : STD_LOGIC_VECTOR (3 downto 0);
-	signal adder_subtractor_flag : STD_LOGIC;
+	
+	--ligacao do somador/subtrator para o registrador de saida
+	signal adder_subtractor_to_regs_EXIT : STD_LOGIC_VECTOR (4 downto 0);
 begin
 		
 	-- Instanciacao do display de 7 segmentos
 	SEVEN_SEGMENTS_DISPLAY_INST: seven_segments_display PORT MAP(
-		SEL => adder_subtractor_to_display,
-		FLAG => adder_subtractor_flag,
+		SEL => regs_EXIT_to_display(3 downto 0),
+		FLAG => adder_subtractor_to_regs_EXIT(4),
 		SEGMENTS => SEGMENTS,
 		DISPLAYS => DISPLAYS
 	);
@@ -77,16 +90,23 @@ begin
 		q_out => regs_B_q_out
 	);
 	
+	REG_EXIT: five_bit_regs port map(
+		clock => CLOCK,
+		data => adder_subtractor_to_regs_EXIT,
+		enable => ENABLE_EXIT,
+		clear => CLEAR_EXIT,
+		q_out => regs_EXIT_to_display
+	);
+	
 	-- Instanciacao do somador de 4bits
 	ADDER_SUBTRACTOR_INST: adder_subtractor PORT MAP(
 		ENT_A => regs_A_q_out,
 		ENT_B => regs_B_q_out,
 		OPTION => OPTION,
-		FLAG => adder_subtractor_flag,
-		RESULTS => adder_subtractor_to_display
+		RESULTS => adder_subtractor_to_regs_EXIT
 	);
 	
-	FLAG <= adder_subtractor_flag;
+	FLAG <= adder_subtractor_to_regs_EXIT(4);
 
 end Behavioral;
 

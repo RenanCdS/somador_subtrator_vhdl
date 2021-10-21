@@ -37,6 +37,10 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="adder_subtractor_TB_stx_beh.prj"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="adder_subtractor_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="adder_subtractor_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="five_bit_regs.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="five_bit_regs.stx"/>
+    <file xil_pn:fileType="FILE_VHDL_INSTTEMPLATE" xil_pn:name="five_bit_regs.vhi"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="five_bit_regs.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="full_adder.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="full_adder.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="full_adder.xst"/>
@@ -48,6 +52,7 @@
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_1"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_2"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_3"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_4"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="regs.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="regs.stx"/>
     <file xil_pn:fileType="FILE_VHDL_INSTTEMPLATE" xil_pn:name="regs.vhi"/>
@@ -87,11 +92,12 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1634698131" xil_pn:in_ck="6944301453326745608" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1634698131">
+    <transform xil_pn:end_ts="1634784989" xil_pn:in_ck="-7189081241244227568" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1634784989">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="adder_subtractor.vhd"/>
       <outfile xil_pn:name="adder_subtractor_TB.vhd"/>
+      <outfile xil_pn:name="five_bit_regs.vhd"/>
       <outfile xil_pn:name="regs.vhd"/>
       <outfile xil_pn:name="regs_TB.vhd"/>
       <outfile xil_pn:name="seven_segments_display.vhd"/>
@@ -99,11 +105,11 @@
       <outfile xil_pn:name="somador_subtrator_n2.vhd"/>
       <outfile xil_pn:name="top_TB.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1634458884" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-5427938579002105378" xil_pn:start_ts="1634458884">
+    <transform xil_pn:end_ts="1634783623" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-5427938579002105378" xil_pn:start_ts="1634783623">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1634458884" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="8890955358453824352" xil_pn:start_ts="1634458884">
+    <transform xil_pn:end_ts="1634783623" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="8890955358453824352" xil_pn:start_ts="1634783623">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -111,11 +117,12 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1634698131" xil_pn:in_ck="6944301453326745608" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1634698131">
+    <transform xil_pn:end_ts="1634784989" xil_pn:in_ck="-7189081241244227568" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1634784989">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="adder_subtractor.vhd"/>
       <outfile xil_pn:name="adder_subtractor_TB.vhd"/>
+      <outfile xil_pn:name="five_bit_regs.vhd"/>
       <outfile xil_pn:name="regs.vhd"/>
       <outfile xil_pn:name="regs_TB.vhd"/>
       <outfile xil_pn:name="seven_segments_display.vhd"/>
@@ -123,7 +130,7 @@
       <outfile xil_pn:name="somador_subtrator_n2.vhd"/>
       <outfile xil_pn:name="top_TB.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1634698139" xil_pn:in_ck="6944301453326745608" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-245690780344499490" xil_pn:start_ts="1634698131">
+    <transform xil_pn:end_ts="1634784996" xil_pn:in_ck="-7189081241244227568" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-245690780344499490" xil_pn:start_ts="1634784989">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -135,9 +142,11 @@
       <outfile xil_pn:name="top_TB_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1634698139" xil_pn:in_ck="6730239003571724056" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="6709511537307535467" xil_pn:start_ts="1634698139">
+    <transform xil_pn:end_ts="1634784996" xil_pn:in_ck="6730239003571724056" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="6709511537307535467" xil_pn:start_ts="1634784996">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="top_TB_isim_beh.wdb"/>
@@ -170,12 +179,10 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1634456809" xil_pn:in_ck="-4697113908998169875" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-4156529625039897788" xil_pn:start_ts="1634456795">
+    <transform xil_pn:end_ts="1634785105" xil_pn:in_ck="6108865612709500245" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-4156529625039897788" xil_pn:start_ts="1634785086">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="adder_subtractor.ngr"/>

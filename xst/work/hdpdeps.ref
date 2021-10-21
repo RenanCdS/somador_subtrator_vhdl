@@ -1,11 +1,19 @@
-V3 18
-FL /home/ise/ISE_Projects/somador_subtrator_n2/adder_subtractor.vhd 2021/10/17.18:02:14 P.20131013
-EN work/adder_subtractor 1634456802 \
+V3 22
+FL /home/ise/ISE_Projects/somador_subtrator_n2/adder_subtractor.vhd 2021/10/21.02:22:05 P.20131013
+EN work/adder_subtractor 1634785098 \
       FL /home/ise/ISE_Projects/somador_subtrator_n2/adder_subtractor.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/adder_subtractor/Behavioral 1634456803 \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/adder_subtractor/Behavioral 1634785099 \
       FL /home/ise/ISE_Projects/somador_subtrator_n2/adder_subtractor.vhd \
-      EN work/adder_subtractor 1634456802
+      EN work/adder_subtractor 1634785098
+FL /home/ise/ISE_Projects/somador_subtrator_n2/five_bit_regs.vhd 2021/10/21.02:16:10 P.20131013
+EN work/five_bit_regs 1634785096 \
+      FL /home/ise/ISE_Projects/somador_subtrator_n2/five_bit_regs.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/five_bit_regs/Behavioral 1634785097 \
+      FL /home/ise/ISE_Projects/somador_subtrator_n2/five_bit_regs.vhd \
+      EN work/five_bit_regs 1634785096
 FL /home/ise/ISE_Projects/somador_subtrator_n2/full_adder.vhd 2021/10/16.02:26:02 P.20131013
 EN work/full_adder 1634438688 \
       FL /home/ise/ISE_Projects/somador_subtrator_n2/full_adder.vhd \
@@ -14,22 +22,22 @@ AR work/full_adder/Behavioral 1634438689 \
       FL /home/ise/ISE_Projects/somador_subtrator_n2/full_adder.vhd \
       EN work/full_adder 1634438688
 FL /home/ise/ISE_Projects/somador_subtrator_n2/regs.vhd 2021/10/17.03:04:50 P.20131013
-EN work/regs 1634456800 FL /home/ise/ISE_Projects/somador_subtrator_n2/regs.vhd \
+EN work/regs 1634785094 FL /home/ise/ISE_Projects/somador_subtrator_n2/regs.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/regs/Behavioral 1634456801 \
-      FL /home/ise/ISE_Projects/somador_subtrator_n2/regs.vhd EN work/regs 1634456800
-FL /home/ise/ISE_Projects/somador_subtrator_n2/seven_segments_display.vhd 2021/10/17.18:26:02 P.20131013
-EN work/seven_segments_display 1634456798 \
+AR work/regs/Behavioral 1634785095 \
+      FL /home/ise/ISE_Projects/somador_subtrator_n2/regs.vhd EN work/regs 1634785094
+FL /home/ise/ISE_Projects/somador_subtrator_n2/seven_segments_display.vhd 2021/10/20.02:46:29 P.20131013
+EN work/seven_segments_display 1634785092 \
       FL /home/ise/ISE_Projects/somador_subtrator_n2/seven_segments_display.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/seven_segments_display/Behavioral 1634456799 \
+AR work/seven_segments_display/Behavioral 1634785093 \
       FL /home/ise/ISE_Projects/somador_subtrator_n2/seven_segments_display.vhd \
-      EN work/seven_segments_display 1634456798
-FL /home/ise/ISE_Projects/somador_subtrator_n2/somador_subtrator_n2.vhd 2021/10/17.18:27:30 P.20131013
-EN work/somador_subtrator_n2 1634456804 \
+      EN work/seven_segments_display 1634785092
+FL /home/ise/ISE_Projects/somador_subtrator_n2/somador_subtrator_n2.vhd 2021/10/21.02:31:09 P.20131013
+EN work/somador_subtrator_n2 1634785100 \
       FL /home/ise/ISE_Projects/somador_subtrator_n2/somador_subtrator_n2.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/somador_subtrator_n2/Behavioral 1634456805 \
+AR work/somador_subtrator_n2/Behavioral 1634785101 \
       FL /home/ise/ISE_Projects/somador_subtrator_n2/somador_subtrator_n2.vhd \
-      EN work/somador_subtrator_n2 1634456804 CP seven_segments_display CP regs \
-      CP adder_subtractor
+      EN work/somador_subtrator_n2 1634785100 CP seven_segments_display CP regs \
+      CP five_bit_regs CP adder_subtractor
