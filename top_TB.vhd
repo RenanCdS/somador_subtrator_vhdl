@@ -79,40 +79,40 @@ BEGIN
 		ENABLE_EXIT <= '1';
 		
 		-- Adicao comum
---      wait for CLOCK_period;	
---		CLEAR <= '0';
---		OPTION <= '0';
---		ENABLE_A <= '1';
---		ENABLE_B <= '0';
---		INPUT <= "0001";
---      wait for CLOCK_period;
---		ENABLE_A <= '0';
---		ENABLE_B <= '1';
---		INPUT <= "0010";
+      wait for CLOCK_period;	
+		CLEAR <= '0';
+		OPTION <= '0';
+		ENABLE_A <= '1';
+		ENABLE_B <= '0';
+		INPUT <= "0001";
+      wait for CLOCK_period;
+		ENABLE_A <= '0';
+		ENABLE_B <= '1';
+		INPUT <= "0010";
 		
 		-- Subtracao que resulta em numero negativo
---		wait for CLOCK_period;
---		CLEAR	<= '0';
---		OPTION <= '1';
---		ENABLE_A <= '1';
---		ENABLE_B <= '0';
---		INPUT <= "0010";
---		wait for CLOCK_period;
---		ENABLE_A <= '0';
---		ENABLE_B <= '1';
---		INPUT <= "1000";
+		wait for CLOCK_period;
+		CLEAR	<= '0';
+		OPTION <= '1';
+		ENABLE_A <= '1';
+		ENABLE_B <= '0';
+		INPUT <= "0010";
+		wait for CLOCK_period;
+		ENABLE_A <= '0';
+		ENABLE_B <= '1';
+		INPUT <= "1000";
 		
 		-- Subtracao que resulta em numero positivo
---		wait for CLOCK_period;
---		CLEAR	<= '0';
---		OPTION <= '1';
---		ENABLE_A <= '1';
---		INPUT <= "1010";
---		ENABLE_B <= '0';
---		wait for CLOCK_period;
---		ENABLE_A <= '0';
---		INPUT <= "0010";
---		ENABLE_B <= '1';
+		wait for CLOCK_period;
+		CLEAR	<= '0';
+		OPTION <= '1';
+		ENABLE_A <= '1';
+		INPUT <= "1010";
+		ENABLE_B <= '0';
+		wait for CLOCK_period;
+		ENABLE_A <= '0';
+		INPUT <= "0010";
+		ENABLE_B <= '1';
 		
 		-- Adicao de F + 1. Deve resultar em 0 e acender a flag
 		wait for CLOCK_period;

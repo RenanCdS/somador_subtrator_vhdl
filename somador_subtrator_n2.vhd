@@ -69,7 +69,7 @@ begin
 	-- Instanciacao do display de 7 segmentos
 	SEVEN_SEGMENTS_DISPLAY_INST: seven_segments_display PORT MAP(
 		SEL => regs_EXIT_to_display(3 downto 0),
-		FLAG => adder_subtractor_to_regs_EXIT(4),
+		FLAG => regs_EXIT_to_display(4),
 		SEGMENTS => SEGMENTS,
 		DISPLAYS => DISPLAYS
 	);
@@ -106,7 +106,7 @@ begin
 		RESULTS => adder_subtractor_to_regs_EXIT
 	);
 	
-	FLAG <= adder_subtractor_to_regs_EXIT(4);
+	FLAG <= regs_EXIT_to_display(4);
 
 end Behavioral;
 

@@ -2,12 +2,12 @@ Command line:
    top_TB_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  57998
+     -socket  46263
 
-Thu Oct 21 02:56:39 2021
+Fri Oct 22 04:03:43 2021
 
 
- Elaboration Time: 0.08 sec
+ Elaboration Time: 0.12 sec
 
  Current Memory Usage: 198.836 Meg
 
@@ -20,9 +20,9 @@ Thu Oct 21 02:56:39 2021
  Total Traceable Variables  : 16
  Total Scalar Nets and Variables : 561
 
- Total Simulation Time: 0.23 sec
+ Total Simulation Time: 0.18 sec
 
  Current Memory Usage: 276.435 Meg
 
-Thu Oct 21 02:57:58 2021
+Fri Oct 22 04:06:01 2021
 

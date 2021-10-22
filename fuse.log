@@ -12,7 +12,7 @@ Parsing VHDL file "/home/ise/ISE_Projects/somador_subtrator_n2/top_TB.vhd" into 
 Starting static elaboration
 Completed static elaboration
 Fuse Memory Usage: 98460 KB
-Fuse CPU Usage: 1560 ms
+Fuse CPU Usage: 3600 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package std_logic_arith
@@ -28,5 +28,5 @@ Time Resolution for simulation is 1ps.
 Compiled 16 VHDL Units
 Built simulation executable /home/ise/ISE_Projects/somador_subtrator_n2/top_TB_isim_beh.exe
 Fuse Memory Usage: 117248 KB
-Fuse CPU Usage: 1980 ms
-GCC CPU Usage: 740 ms
+Fuse CPU Usage: 4320 ms
+GCC CPU Usage: 1030 ms

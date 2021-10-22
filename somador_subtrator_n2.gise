@@ -92,7 +92,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1634784989" xil_pn:in_ck="-7189081241244227568" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1634784989">
+    <transform xil_pn:end_ts="1634875408" xil_pn:in_ck="-7189081241244227568" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1634875408">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="adder_subtractor.vhd"/>
@@ -117,7 +117,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1634784989" xil_pn:in_ck="-7189081241244227568" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1634784989">
+    <transform xil_pn:end_ts="1634875408" xil_pn:in_ck="-7189081241244227568" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1634875408">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="adder_subtractor.vhd"/>
@@ -130,7 +130,7 @@
       <outfile xil_pn:name="somador_subtrator_n2.vhd"/>
       <outfile xil_pn:name="top_TB.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1634784996" xil_pn:in_ck="-7189081241244227568" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-245690780344499490" xil_pn:start_ts="1634784989">
+    <transform xil_pn:end_ts="1634875418" xil_pn:in_ck="-7189081241244227568" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-245690780344499490" xil_pn:start_ts="1634875408">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -142,11 +142,9 @@
       <outfile xil_pn:name="top_TB_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1634784996" xil_pn:in_ck="6730239003571724056" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="6709511537307535467" xil_pn:start_ts="1634784996">
+    <transform xil_pn:end_ts="1634875419" xil_pn:in_ck="6730239003571724056" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="6709511537307535467" xil_pn:start_ts="1634875418">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="top_TB_isim_beh.wdb"/>
@@ -179,7 +177,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1634785105" xil_pn:in_ck="6108865612709500245" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-4156529625039897788" xil_pn:start_ts="1634785086">
+    <transform xil_pn:end_ts="1634874988" xil_pn:in_ck="6108865612709500245" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-4156529625039897788" xil_pn:start_ts="1634874961">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
