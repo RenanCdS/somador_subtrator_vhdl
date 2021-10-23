@@ -20,43 +20,43 @@ begin
 	begin
 		if (FLAG = '0') then
 				case SEL is
-					when "0000" => SEGMENTS <= "0111111"; --0
-					when "0001" => SEGMENTS <= "0000110"; --1
-					when "0010" => SEGMENTS <= "1011011"; --2
-					when "0011" => SEGMENTS <= "1001111"; --3
-					when "0100" => SEGMENTS <= "1100110"; --4
-					when "0101" => SEGMENTS <= "1101101"; --5
-					when "0110" => SEGMENTS <= "1111101"; --6
-					when "0111" => SEGMENTS <= "0000111"; --7
-					when "1000" => SEGMENTS <= "1111111"; --8
-					when "1001" => SEGMENTS <= "1100111"; --9
-					when "1010" => SEGMENTS <= "1110111"; --A
-					when "1011" => SEGMENTS <= "1111100"; --B
-					when "1100" => SEGMENTS <= "0111001"; --C
-					when "1101" => SEGMENTS <= "1011110"; --D
-					when "1110" => SEGMENTS <= "1111001"; --E
-					when "1111" => SEGMENTS <= "1110001"; --F
-					when others => SEGMENTS <= "1111110";
+					when "0000" => SEGMENTS <= "1000000"; 
+					when "0001" => SEGMENTS <= "1111001"; 
+					when "0010" => SEGMENTS <= "0100100"; 
+					when "0011" => SEGMENTS <= "0110000"; 
+					when "0100" => SEGMENTS <= "0011001"; 
+					when "0101" => SEGMENTS <= "0010010"; 
+					when "0110" => SEGMENTS <= "0000010"; 
+					when "0111" => SEGMENTS <= "1111000"; 
+					when "1000" => SEGMENTS <= "0000000"; 
+					when "1001" => SEGMENTS <= "0011000"; 
+					when "1010" => SEGMENTS <= "0001000"; 
+					when "1011" => SEGMENTS <= "0000011"; 
+					when "1100" => SEGMENTS <= "1000110"; 
+					when "1101" => SEGMENTS <= "0100001"; 
+					when "1110" => SEGMENTS <= "0000110"; 
+					when "1111" => SEGMENTS <= "0001110"; 
+					when others => SEGMENTS <= "0000001"; 
 				end case;
 		else 
 				case SEL is
-					when "0000" => SEGMENTS <= "0111111"; --0
-					when "1111" => SEGMENTS <= "0000110"; --1
-					when "1110" => SEGMENTS <= "1011011"; --2
-					when "1101" => SEGMENTS <= "1001111"; --3
-					when "1100" => SEGMENTS <= "1100110"; --4
-					when "1011" => SEGMENTS <= "1101101"; --5
-					when "1010" => SEGMENTS <= "1111101"; --6
-					when "1001" => SEGMENTS <= "0000111"; --7
-					when "1000" => SEGMENTS <= "1111111"; --8
-					when "0111" => SEGMENTS <= "1100111"; --9
-					when "0110" => SEGMENTS <= "1110111"; --A
-					when "0101" => SEGMENTS <= "1111100"; --B
-					when "0100" => SEGMENTS <= "0111001"; --C
-					when "0011" => SEGMENTS <= "1011110"; --D
-					when "0010" => SEGMENTS <= "1111001"; --E
-					when "0001" => SEGMENTS <= "1110001"; --F
-					when others => SEGMENTS <= "1111110"; 
+					when "0000" => SEGMENTS <= "1000000"; 
+					when "1111" => SEGMENTS <= "1111001"; 
+					when "1110" => SEGMENTS <= "0100100"; 
+					when "1101" => SEGMENTS <= "0110000"; 
+					when "1100" => SEGMENTS <= "0011001"; 
+					when "1011" => SEGMENTS <= "0010010"; 
+					when "1010" => SEGMENTS <= "0000010"; 
+					when "1001" => SEGMENTS <= "1111000"; 
+					when "1000" => SEGMENTS <= "0000000"; 
+					when "0111" => SEGMENTS <= "0011000"; 
+					when "0110" => SEGMENTS <= "0001000"; 
+					when "0101" => SEGMENTS <= "0000011"; 
+					when "0100" => SEGMENTS <= "1000110"; 
+					when "0011" => SEGMENTS <= "0100001"; 
+					when "0010" => SEGMENTS <= "0000110"; 
+					when "0001" => SEGMENTS <= "0001110"; 
+					when others => SEGMENTS <= "0000001";  
 				end case;
 		end if;
 	end process;
