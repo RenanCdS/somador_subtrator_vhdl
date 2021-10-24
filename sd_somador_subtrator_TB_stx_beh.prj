@@ -1,0 +1,8 @@
+vhdl isim_temp "seven_segments_display.vhd"
+vhdl isim_temp "regs.vhd"
+vhdl isim_temp "five_bit_regs.vhd"
+vhdl isim_temp "adder_subtractor.vhd"
+vhdl isim_temp "uc_somador_subtrator.vhd"
+vhdl isim_temp "somador_subtrator_n2.vhd"
+vhdl isim_temp "sd_somador_subtrator_n2.vhd"
+vhdl isim_temp "sd_somador_subtrator_TB.vhd"

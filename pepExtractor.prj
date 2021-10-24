@@ -1,1 +1,7 @@
+work	"adder_subtractor.vhd"
 work	"five_bit_regs.vhd"
+work	"regs.vhd"
+work	"sd_somador_subtrator_n2.vhd"
+work	"seven_segments_display.vhd"
+work	"somador_subtrator_n2.vhd"
+work	"uc_somador_subtrator.vhd"

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/ise/ISE_Projects/somador_subtrator_n2/sd_somador_subtrator_n2.ncd
+OUTFILE=/home/ise/ISE_Projects/somador_subtrator_n2/sd_somador_subtrator_n2.bit
+FAMILY=Spartan3E
+PART=xc3s100e-4cp132
+WORKINGDIR=/home/ise/ISE_Projects/somador_subtrator_n2
+LICENSE=ISE
+USER_INFO=8416_11442_1478797146_620

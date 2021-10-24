@@ -1,0 +1,1 @@
+vhdtdtfi -prj somador_subtrator_n2 -o /home/ise/ISE_Projects/somador_subtrator_n2/uc_somador_subtrator.vhi -module uc_somador_subtrator -template /opt/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work uc_somador_subtrator.vhd 

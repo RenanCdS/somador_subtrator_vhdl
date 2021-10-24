@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "/home/ise/ISE_Projects/somador_subtrator_n2/top_TB_isim_beh.exe" -prj "/home/ise/ISE_Projects/somador_subtrator_n2/top_TB_beh.prj" "work.top_TB" 
+-intstyle "ise" -incremental -o "/home/ise/ISE_Projects/somador_subtrator_n2/sd_somador_subtrator_TB_isim_beh.exe" -prj "/home/ise/ISE_Projects/somador_subtrator_n2/sd_somador_subtrator_TB_beh.prj" "work.sd_somador_subtrator_TB" 

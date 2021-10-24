@@ -1,4 +1,4 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/ise/ISE_Projects/somador_subtrator_n2/top_TB_isim_beh.exe -prj /home/ise/ISE_Projects/somador_subtrator_n2/top_TB_beh.prj work.top_TB 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/ise/ISE_Projects/somador_subtrator_n2/sd_somador_subtrator_TB_isim_beh.exe -prj /home/ise/ISE_Projects/somador_subtrator_n2/sd_somador_subtrator_TB_beh.prj work.sd_somador_subtrator_TB 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 1
 Turning on mult-threading, number of parallel sub-compilation jobs: 0 
@@ -7,12 +7,14 @@ Parsing VHDL file "/home/ise/ISE_Projects/somador_subtrator_n2/seven_segments_di
 Parsing VHDL file "/home/ise/ISE_Projects/somador_subtrator_n2/regs.vhd" into library work
 Parsing VHDL file "/home/ise/ISE_Projects/somador_subtrator_n2/five_bit_regs.vhd" into library work
 Parsing VHDL file "/home/ise/ISE_Projects/somador_subtrator_n2/adder_subtractor.vhd" into library work
+Parsing VHDL file "/home/ise/ISE_Projects/somador_subtrator_n2/uc_somador_subtrator.vhd" into library work
 Parsing VHDL file "/home/ise/ISE_Projects/somador_subtrator_n2/somador_subtrator_n2.vhd" into library work
-Parsing VHDL file "/home/ise/ISE_Projects/somador_subtrator_n2/top_TB.vhd" into library work
+Parsing VHDL file "/home/ise/ISE_Projects/somador_subtrator_n2/sd_somador_subtrator_n2.vhd" into library work
+Parsing VHDL file "/home/ise/ISE_Projects/somador_subtrator_n2/sd_somador_subtrator_TB.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 98460 KB
-Fuse CPU Usage: 3600 ms
+Fuse Memory Usage: 98440 KB
+Fuse CPU Usage: 1180 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package std_logic_arith
@@ -23,10 +25,12 @@ Compiling architecture behavioral of entity regs [regs_default]
 Compiling architecture behavioral of entity five_bit_regs [five_bit_regs_default]
 Compiling architecture behavioral of entity adder_subtractor [adder_subtractor_default]
 Compiling architecture behavioral of entity somador_subtrator_n2 [somador_subtrator_n2_default]
-Compiling architecture behavior of entity top_tb
+Compiling architecture behavioral of entity uc_somador_subtrator [uc_somador_subtrator_default]
+Compiling architecture behavioral of entity sd_somador_subtrator_n2 [sd_somador_subtrator_n2_default]
+Compiling architecture behavior of entity sd_somador_subtrator_tb
 Time Resolution for simulation is 1ps.
-Compiled 16 VHDL Units
-Built simulation executable /home/ise/ISE_Projects/somador_subtrator_n2/top_TB_isim_beh.exe
-Fuse Memory Usage: 117248 KB
-Fuse CPU Usage: 4320 ms
-GCC CPU Usage: 1030 ms
+Compiled 20 VHDL Units
+Built simulation executable /home/ise/ISE_Projects/somador_subtrator_n2/sd_somador_subtrator_TB_isim_beh.exe
+Fuse Memory Usage: 117360 KB
+Fuse CPU Usage: 1490 ms
+GCC CPU Usage: 460 ms

@@ -1,0 +1,28 @@
+Command line:
+   uc_somador_subtrator_TB_isim_beh.exe
+     -simmode  gui
+     -simrunnum  1
+     -socket  56940
+
+Sun Oct 24 02:24:43 2021
+
+
+ Elaboration Time: 0.04 sec
+
+ Current Memory Usage: 198.611 Meg
+
+ Total Signals          : 22
+ Total Nets             : 12
+ Total Signal Drivers   : 10
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 4
+ Total Traceable Variables  : 9
+ Total Scalar Nets and Variables : 373
+
+ Total Simulation Time: 0.05 sec
+
+ Current Memory Usage: 276.21 Meg
+
+Sun Oct 24 02:24:59 2021
+
