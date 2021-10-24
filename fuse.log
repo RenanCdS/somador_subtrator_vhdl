@@ -13,8 +13,8 @@ Parsing VHDL file "/home/ise/ISE_Projects/somador_subtrator_n2/sd_somador_subtra
 Parsing VHDL file "/home/ise/ISE_Projects/somador_subtrator_n2/sd_somador_subtrator_TB.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 98440 KB
-Fuse CPU Usage: 1180 ms
+Fuse Memory Usage: 98444 KB
+Fuse CPU Usage: 1230 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package std_logic_arith
@@ -31,6 +31,6 @@ Compiling architecture behavior of entity sd_somador_subtrator_tb
 Time Resolution for simulation is 1ps.
 Compiled 20 VHDL Units
 Built simulation executable /home/ise/ISE_Projects/somador_subtrator_n2/sd_somador_subtrator_TB_isim_beh.exe
-Fuse Memory Usage: 117360 KB
-Fuse CPU Usage: 1490 ms
-GCC CPU Usage: 460 ms
+Fuse Memory Usage: 117372 KB
+Fuse CPU Usage: 1530 ms
+GCC CPU Usage: 480 ms

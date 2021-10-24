@@ -146,13 +146,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1635045238" xil_pn:in_ck="-8888249727879717349" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1635045238">
+    <transform xil_pn:end_ts="1635049538" xil_pn:in_ck="-8888249727879717349" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1635049538">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="adder_subtractor.vhd"/>
       <outfile xil_pn:name="adder_subtractor_TB.vhd"/>
       <outfile xil_pn:name="five_bit_regs.vhd"/>
@@ -179,14 +175,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1635045238" xil_pn:in_ck="-8888249727879717349" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1635045238">
+    <transform xil_pn:end_ts="1635049538" xil_pn:in_ck="-8888249727879717349" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1635049538">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="adder_subtractor.vhd"/>
       <outfile xil_pn:name="adder_subtractor_TB.vhd"/>
       <outfile xil_pn:name="five_bit_regs.vhd"/>
@@ -201,13 +192,10 @@
       <outfile xil_pn:name="uc_somador_subtrator.vhd"/>
       <outfile xil_pn:name="uc_somador_subtrator_TB.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1635045243" xil_pn:in_ck="-8888249727879717349" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="9182792162747073368" xil_pn:start_ts="1635045238">
+    <transform xil_pn:end_ts="1635049543" xil_pn:in_ck="-8888249727879717349" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="9182792162747073368" xil_pn:start_ts="1635049538">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
@@ -216,12 +204,9 @@
       <outfile xil_pn:name="sd_somador_subtrator_TB_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1635045243" xil_pn:in_ck="-5828035511264960255" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="35025754799096997" xil_pn:start_ts="1635045243">
+    <transform xil_pn:end_ts="1635049543" xil_pn:in_ck="-5828035511264960255" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="35025754799096997" xil_pn:start_ts="1635049543">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="sd_somador_subtrator_TB_isim_beh.wdb"/>
@@ -258,7 +243,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
@@ -283,6 +270,7 @@
     <transform xil_pn:end_ts="1635045737" xil_pn:in_ck="-6434140360745631779" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="962960936405341226" xil_pn:start_ts="1635045728">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="sd_somador_subtrator_n2.bld"/>
@@ -293,6 +281,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="sd_somador_subtrator_n2.pcf"/>
       <outfile xil_pn:name="sd_somador_subtrator_n2_map.map"/>
@@ -307,6 +298,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
       <outfile xil_pn:name="sd_somador_subtrator_n2.ncd"/>
       <outfile xil_pn:name="sd_somador_subtrator_n2.pad"/>
@@ -322,6 +314,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="sd_somador_subtrator_n2.bgn"/>
       <outfile xil_pn:name="sd_somador_subtrator_n2.bit"/>
@@ -333,6 +326,7 @@
     <transform xil_pn:end_ts="1635045762" xil_pn:in_ck="-3506873740690862931" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1635045758">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
       <outfile xil_pn:name="sd_somador_subtrator_n2.twr"/>
       <outfile xil_pn:name="sd_somador_subtrator_n2.twx"/>

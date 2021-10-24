@@ -14,4 +14,3 @@ Time resolution is 1 ps
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 at 0 ps, Instance /sd_somador_subtrator_tb/uut/sd_somador_subtrator_n2/ADDER_SUBTRACTOR_INST/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# exit 0

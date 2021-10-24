@@ -16,7 +16,7 @@ end uc_somador_subtrator;
 architecture Behavioral of uc_somador_subtrator is
 
 	
-	type STATE_TYPE is (e0, e1, e2, e3, e4, e5); -- todos os estados devem ser declarados!
+	type STATE_TYPE is (e0, e1, e2, e3, e4, e5, e6); -- todos os estados devem ser declarados!
 	
 	signal CURRENT_STATE, NEXT_STATE : STATE_TYPE;
 begin
@@ -58,28 +58,39 @@ begin
 				EN1 <= '1';
 				OPERATION <= '0';
 				
-				NEXT_STATE <= e3;
+				NEXT_STATE <= e4;
 			when e2 =>
 				EN1 <= '1';
 				OPERATION <= '1';
 				
 				NEXT_STATE <= e3;
-			when e3 => 
+			when e3 =>
 				EN1 <= '0';
 				EN2 <= '1';
-				EN3 <= '0';
+				OPERATION <= '1';
 				
 				if (EQUAL = '1') then
-					NEXT_STATE <= e4;
+					NEXT_STATE <= e5;
 				else
 					NEXT_STATE <= e3;
 				end if;
-			when e4 =>
-				EN2 <= '0';
+			when e4 => 
+				EN1 <= '0';
+				EN2 <= '1';
+				EN3 <= '0';
+				OPERATION <= '0';
+				
+				if (EQUAL = '1') then
+					NEXT_STATE <= e5;
+				else
+					NEXT_STATE <= e4;
+				end if;
+			when e5 =>
+				EN2 <= '1';
 				EN3 <= '1';
 				
-				NEXT_STATE <= e5;
-			when e5 => 
+				NEXT_STATE <= e6;
+			when e6 => 
 				EN1 <= '0';
 				EN2 <= '0';
 				EN3 <= '0';
@@ -88,9 +99,8 @@ begin
 				if (CLR = '1') then
 					NEXT_STATE <= e0;
 				else
-					NEXT_STATE <= e5;
+					NEXT_STATE <= e6;
 				end if;
-				
 		end case;
 	end process;
 	

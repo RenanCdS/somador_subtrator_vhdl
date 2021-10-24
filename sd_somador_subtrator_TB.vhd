@@ -75,8 +75,9 @@ BEGIN
 		INPUT <= "0001";
 		MORE <= '1';
       wait for 50 ns;
-		MORE <= '0';
 		INPUT <= "0010";
+		MORE <= '0';
+		
 		EQUAL <= '1';
 		
 		-- Subtracao que resulta em numero positivo
