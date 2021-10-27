@@ -1,3 +1,9 @@
+-- EC8 - Arquitetura de Computadores II - N1 2 Bimestre
+-- Rachel Moreira 081180045
+-- Renan Castro dos Santos 081180029
+-- Wellison Sousa 081180040
+-- Wesley Rogerio 081180035
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 

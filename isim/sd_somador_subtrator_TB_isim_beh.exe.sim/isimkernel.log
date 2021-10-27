@@ -1,0 +1,10 @@
+Command line:
+   sd_somador_subtrator_TB_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  57061
+
+Sun Oct 24 04:25:45 2021
+
+
+ Elaboration Time: 0.06 sec
