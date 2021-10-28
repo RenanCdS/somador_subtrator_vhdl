@@ -22,7 +22,7 @@ end uc_somador_subtrator;
 architecture Behavioral of uc_somador_subtrator is
 
 	
-	type STATE_TYPE is (e0, e1, e2, e3, e4, e5, e6); -- todos os estados devem ser declarados!
+	type STATE_TYPE is (e0, e1, e2, e3, e4, e5, e6, e7); -- todos os estados devem ser declarados!
 	
 	signal CURRENT_STATE, NEXT_STATE : STATE_TYPE;
 begin
@@ -87,25 +87,31 @@ begin
 				OPERATION <= '0';
 				
 				if (EQUAL = '1') then
-					NEXT_STATE <= e5;
+					NEXT_STATE <= e6;
 				else
 					NEXT_STATE <= e4;
 				end if;
 			when e5 =>
 				EN2 <= '1';
 				EN3 <= '1';
+				OPERATION <= '1';
 				
-				NEXT_STATE <= e6;
-			when e6 => 
+				NEXT_STATE <= e7;
+			when e6 =>
+				EN2 <= '1';
+				EN3 <= '1';
+				OPERATION <= '0';
+				
+				NEXT_STATE <= e7;
+			when e7 => 
 				EN1 <= '0';
 				EN2 <= '0';
 				EN3 <= '0';
-				OPERATION <= '0';
 	
 				if (CLR = '1') then
 					NEXT_STATE <= e0;
 				else
-					NEXT_STATE <= e6;
+					NEXT_STATE <= e7;
 				end if;
 		end case;
 	end process;

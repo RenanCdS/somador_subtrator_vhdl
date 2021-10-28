@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2021-10-27T19:14:30</DateModified>
+  <DateModified>2021-10-27T19:46:04</DateModified>
   <ModuleName>sd_somador_subtrator_n2</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>/home/ise/ISE_Projects/somador_subtrator_n2/iseconfig/sd_somador_subtrator_n2.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/ise/ISE_Projects/somador_subtrator_n2</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/ise/ISE_Projects/somador_subtrator_n2/</ImplementationReportsDirectory>
   <DateInitialized>2021-10-27T19:14:27</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

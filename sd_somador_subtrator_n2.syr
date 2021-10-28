@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> 
 Reading design: sd_somador_subtrator_n2.prj
@@ -116,11 +116,14 @@ Architecture behavioral of Entity five_bit_regs is up to date.
 Compiling vhdl file "/home/ise/ISE_Projects/somador_subtrator_n2/adder_subtractor.vhd" in Library work.
 Architecture behavioral of Entity adder_subtractor is up to date.
 Compiling vhdl file "/home/ise/ISE_Projects/somador_subtrator_n2/somador_subtrator_n2.vhd" in Library work.
+WARNING:HDLParsers:3530 - Time stamp of file "/home/ise/ISE_Projects/somador_subtrator_n2/somador_subtrator_n2.vhd" is newer than current system time.
 Architecture behavioral of Entity somador_subtrator_n2 is up to date.
 Compiling vhdl file "/home/ise/ISE_Projects/somador_subtrator_n2/uc_somador_subtrator.vhd" in Library work.
+WARNING:HDLParsers:3530 - Time stamp of file "/home/ise/ISE_Projects/somador_subtrator_n2/uc_somador_subtrator.vhd" is newer than current system time.
 Entity <uc_somador_subtrator> compiled.
 Entity <uc_somador_subtrator> (Architecture <behavioral>) compiled.
 Compiling vhdl file "/home/ise/ISE_Projects/somador_subtrator_n2/sd_somador_subtrator_n2.vhd" in Library work.
+WARNING:HDLParsers:3530 - Time stamp of file "/home/ise/ISE_Projects/somador_subtrator_n2/sd_somador_subtrator_n2.vhd" is newer than current system time.
 Architecture behavioral of Entity sd_somador_subtrator_n2 is up to date.
 
 =========================================================================
@@ -180,10 +183,10 @@ Synthesizing Unit <uc_somador_subtrator>.
     Related source file is "/home/ise/ISE_Projects/somador_subtrator_n2/uc_somador_subtrator.vhd".
     Found finite state machine <FSM_0> for signal <CURRENT_STATE>.
     -----------------------------------------------------------------------
-    | States             | 6                                              |
-    | Transitions        | 10                                             |
+    | States             | 8                                              |
+    | Transitions        | 13                                             |
     | Inputs             | 4                                              |
-    | Outputs            | 6                                              |
+    | Outputs            | 8                                              |
     | Clock              | CLK_UC                    (rising_edge)        |
     | Reset              | RST_UC                    (positive)           |
     | Reset type         | asynchronous                                   |
@@ -264,16 +267,18 @@ Macro Statistics
 =========================================================================
 
 Analyzing FSM <FSM_0> for best encoding.
-Optimizing FSM <sd_somador_subtrator/CURRENT_STATE/FSM> on signal <CURRENT_STATE[1:6]> with one-hot encoding.
+Optimizing FSM <sd_somador_subtrator/CURRENT_STATE/FSM> on signal <CURRENT_STATE[1:8]> with one-hot encoding.
 -------------------
  State | Encoding
 -------------------
- e0    | 000001
- e1    | 000010
- e2    | 000100
- e3    | 001000
- e4    | 010000
- e5    | 100000
+ e0    | 00000001
+ e1    | 00000010
+ e2    | 00000100
+ e3    | 00010000
+ e4    | 00001000
+ e5    | 00100000
+ e6    | 01000000
+ e7    | 10000000
 -------------------
 
 =========================================================================
@@ -296,6 +301,8 @@ Macro Statistics
 
 Optimizing unit <sd_somador_subtrator_n2> ...
 
+Optimizing unit <uc_somador_subtrator> ...
+
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block sd_somador_subtrator_n2, actual ratio is 2.
@@ -306,8 +313,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 19
- Flip-Flops                                            : 19
+# Registers                                            : 21
+ Flip-Flops                                            : 21
 
 =========================================================================
 
@@ -336,18 +343,18 @@ Design Statistics
 # IOs                              : 21
 
 Cell Usage :
-# BELS                             : 45
+# BELS                             : 50
 #      GND                         : 1
-#      LUT2                        : 6
+#      LUT2                        : 7
 #      LUT2_L                      : 1
-#      LUT3                        : 4
+#      LUT3                        : 7
 #      LUT3_D                      : 1
 #      LUT3_L                      : 1
-#      LUT4                        : 22
+#      LUT4                        : 23
 #      MUXF5                       : 8
 #      VCC                         : 1
-# FlipFlops/Latches                : 23
-#      FDC                         : 5
+# FlipFlops/Latches                : 25
+#      FDC                         : 7
 #      FDCE                        : 13
 #      FDP                         : 1
 #      LD_1                        : 4
@@ -363,9 +370,9 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-4 
 
- Number of Slices:                       23  out of    960     2%  
- Number of Slice Flip Flops:             23  out of   1920     1%  
- Number of 4 input LUTs:                 35  out of   1920     1%  
+ Number of Slices:                       24  out of    960     2%  
+ Number of Slice Flip Flops:             25  out of   1920     1%  
+ Number of 4 input LUTs:                 40  out of   1920     2%  
  Number of IOs:                          21
  Number of bonded IOBs:                  21  out of     83    25%  
  Number of GCLKs:                         1  out of     24     4%  
@@ -388,15 +395,16 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
--------------------------------------------------------------------------------+----------------------------------------+-------+
-Clock Signal                                                                   | Clock buffer(FF name)                  | Load  |
--------------------------------------------------------------------------------+----------------------------------------+-------+
-sd_somador_subtrator/EN1_mux0000(sd_somador_subtrator/EN1_mux00001:O)          | NONE(*)(sd_somador_subtrator/EN3)      | 2     |
-sd_somador_subtrator/OPERATION_or0000(sd_somador_subtrator/OPERATION_or00001:O)| NONE(*)(sd_somador_subtrator/OPERATION)| 1     |
-sd_somador_subtrator/CURRENT_STATE_FSM_FFd2                                    | NONE(sd_somador_subtrator/EN1)         | 1     |
-CLK                                                                            | BUFGP                                  | 19    |
--------------------------------------------------------------------------------+----------------------------------------+-------+
-(*) These 2 clock signal(s) are generated by combinatorial logic,
+---------------------------------------------------------------------+-------------------------------------+-------+
+Clock Signal                                                         | Clock buffer(FF name)               | Load  |
+---------------------------------------------------------------------+-------------------------------------+-------+
+CLK                                                                  | BUFGP                               | 21    |
+sd_somador_subtrator/EN3_or0000(sd_somador_subtrator/EN3_or00001:O)  | NONE(*)(sd_somador_subtrator/EN3)   | 1     |
+sd_somador_subtrator/CURRENT_STATE_FSM_FFd1                          | NONE(sd_somador_subtrator/OPERATION)| 1     |
+sd_somador_subtrator/EN1_mux0000(sd_somador_subtrator/EN1_mux00001:O)| NONE(*)(sd_somador_subtrator/EN2)   | 1     |
+sd_somador_subtrator/EN1_or0000(sd_somador_subtrator/EN1_or00001:O)  | NONE(*)(sd_somador_subtrator/EN1)   | 1     |
+---------------------------------------------------------------------+-------------------------------------+-------+
+(*) These 3 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -406,7 +414,7 @@ Asynchronous Control Signals Information:
 -----------------------------------+------------------------+-------+
 Control Signal                     | Buffer(FF name)        | Load  |
 -----------------------------------+------------------------+-------+
-CLEAR                              | IBUF                   | 19    |
+CLEAR                              | IBUF                   | 21    |
 -----------------------------------+------------------------+-------+
 
 Timing Summary:
@@ -425,7 +433,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
   Clock period: 4.497ns (frequency: 222.370MHz)
-  Total number of paths / destination ports: 44 / 11
+  Total number of paths / destination ports: 47 / 13
 -------------------------------------------------------------------------
 Delay:               4.497ns (Levels of Logic = 4)
   Source:            sd_somador_subtrator_n2/REG_A/q_out_temp_0 (FF)
@@ -449,21 +457,21 @@ Delay:               4.497ns (Levels of Logic = 4)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 17 / 14
+  Total number of paths / destination ports: 19 / 16
 -------------------------------------------------------------------------
 Offset:              4.139ns (Levels of Logic = 3)
   Source:            MORE (PAD)
-  Destination:       sd_somador_subtrator/CURRENT_STATE_FSM_FFd6 (FF)
+  Destination:       sd_somador_subtrator/CURRENT_STATE_FSM_FFd8 (FF)
   Destination Clock: CLK rising
 
-  Data Path: MORE to sd_somador_subtrator/CURRENT_STATE_FSM_FFd6
+  Data Path: MORE to sd_somador_subtrator/CURRENT_STATE_FSM_FFd8
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             3   1.218   0.706  MORE_IBUF (MORE_IBUF)
-     LUT2:I0->O            1   0.704   0.499  sd_somador_subtrator/CURRENT_STATE_FSM_FFd6-In_SW0 (N01)
-     LUT4:I1->O            1   0.704   0.000  sd_somador_subtrator/CURRENT_STATE_FSM_FFd6-In (sd_somador_subtrator/CURRENT_STATE_FSM_FFd6-In)
-     FDP:D                     0.308          sd_somador_subtrator/CURRENT_STATE_FSM_FFd6
+     LUT2:I0->O            1   0.704   0.499  sd_somador_subtrator/CURRENT_STATE_FSM_FFd8-In_SW0 (N01)
+     LUT4:I1->O            1   0.704   0.000  sd_somador_subtrator/CURRENT_STATE_FSM_FFd8-In (sd_somador_subtrator/CURRENT_STATE_FSM_FFd8-In)
+     FDP:D                     0.308          sd_somador_subtrator/CURRENT_STATE_FSM_FFd8
     ----------------------------------------
     Total                      4.139ns (2.934ns logic, 1.205ns route)
                                        (70.9% logic, 29.1% route)
@@ -492,15 +500,15 @@ Offset:              6.483ns (Levels of Logic = 3)
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 9.36 secs
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 11.89 secs
  
 --> 
 
 
-Total memory usage is 514208 kilobytes
+Total memory usage is 611248 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    5 (   0 filtered)
+Number of warnings :    8 (   0 filtered)
 Number of infos    :    8 (   0 filtered)
 

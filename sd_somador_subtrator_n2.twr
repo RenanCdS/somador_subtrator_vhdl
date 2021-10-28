@@ -4,7 +4,8 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 4 -n
 3 -fastpaths -xml sd_somador_subtrator_n2.twx sd_somador_subtrator_n2.ncd -o
-sd_somador_subtrator_n2.twr sd_somador_subtrator_n2.pcf
+sd_somador_subtrator_n2.twr sd_somador_subtrator_n2.pcf -ucf
+sd_somador_subtrator_n2.ucf
 
 Design file:              sd_somador_subtrator_n2.ncd
 Physical constraint file: sd_somador_subtrator_n2.pcf
@@ -45,14 +46,14 @@ Setup/Hold to clock CLK
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-CLEAR       |    1.086(R)|    0.463(R)|CLK_BUFGP         |   0.000|
-EQUAL       |    0.243(R)|    1.026(R)|CLK_BUFGP         |   0.000|
-INPUT<0>    |    0.092(R)|    1.111(R)|CLK_BUFGP         |   0.000|
-INPUT<1>    |    0.068(R)|    1.364(R)|CLK_BUFGP         |   0.000|
-INPUT<2>    |    0.294(R)|    1.142(R)|CLK_BUFGP         |   0.000|
-INPUT<3>    |    0.947(R)|    0.827(R)|CLK_BUFGP         |   0.000|
-LESS        |    0.968(R)|    0.985(R)|CLK_BUFGP         |   0.000|
-MORE        |    1.069(R)|    0.883(R)|CLK_BUFGP         |   0.000|
+CLEAR       |    1.720(R)|   -0.035(R)|CLK_BUFGP         |   0.000|
+EQUAL       |    1.500(R)|    0.329(R)|CLK_BUFGP         |   0.000|
+INPUT<0>    |    0.768(R)|    0.568(R)|CLK_BUFGP         |   0.000|
+INPUT<1>    |    2.397(R)|   -0.736(R)|CLK_BUFGP         |   0.000|
+INPUT<2>    |    1.176(R)|    0.495(R)|CLK_BUFGP         |   0.000|
+INPUT<3>    |    1.404(R)|    0.323(R)|CLK_BUFGP         |   0.000|
+LESS        |    1.977(R)|    0.126(R)|CLK_BUFGP         |   0.000|
+MORE        |    1.924(R)|    0.320(R)|CLK_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock CLK to Pad
@@ -60,14 +61,14 @@ Clock CLK to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-FLAG        |    7.057(R)|CLK_BUFGP         |   0.000|
-SEGMENTS<0> |   10.292(R)|CLK_BUFGP         |   0.000|
-SEGMENTS<1> |   10.696(R)|CLK_BUFGP         |   0.000|
-SEGMENTS<2> |   10.435(R)|CLK_BUFGP         |   0.000|
-SEGMENTS<3> |   10.440(R)|CLK_BUFGP         |   0.000|
-SEGMENTS<4> |   10.222(R)|CLK_BUFGP         |   0.000|
-SEGMENTS<5> |   10.114(R)|CLK_BUFGP         |   0.000|
-SEGMENTS<6> |    9.889(R)|CLK_BUFGP         |   0.000|
+FLAG        |    7.903(R)|CLK_BUFGP         |   0.000|
+SEGMENTS<0> |   10.450(R)|CLK_BUFGP         |   0.000|
+SEGMENTS<1> |   10.309(R)|CLK_BUFGP         |   0.000|
+SEGMENTS<2> |   10.790(R)|CLK_BUFGP         |   0.000|
+SEGMENTS<3> |   10.035(R)|CLK_BUFGP         |   0.000|
+SEGMENTS<4> |   10.394(R)|CLK_BUFGP         |   0.000|
+SEGMENTS<5> |    9.915(R)|CLK_BUFGP         |   0.000|
+SEGMENTS<6> |   10.175(R)|CLK_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock CLK
@@ -75,11 +76,11 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    3.837|         |         |         |
+CLK            |    3.802|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Sun Oct 24 03:22:41 2021 
+Analysis completed Wed Oct 27 20:55:10 2021 
 --------------------------------------------------------------------------------
 
 Trace Settings:
